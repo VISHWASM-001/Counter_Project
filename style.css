@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --page-bg: #090A0F;
+    --card-bg: #151722;
+    --card-border: #ffffff;
+    --text: #ffffff;
+    --btn-add: green;
+    --btn-reset: rgb(163, 141, 141);
+    --btn-sub: red;
+    --btn-text: #ffffff;
+    --toggle-bg: #ffffff;
+    --toggle-text: #090A0F;
+}
+
+:root[data-theme="light"]{
+    --page-bg: #f1f3f8;
+    --card-bg: #ffffff;
+    --card-border: #c9cedb;
+    --text: #151722;
+    --btn-add: #2e9e4f;
+    --btn-reset: #9aa0b2;
+    --btn-sub: #e04848;
+    --btn-text: #ffffff;
+    --toggle-bg: #151722;
+    --toggle-text: #ffffff;
+}
+
+body{
+    transition: background-color .3s;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--page-bg);
+    transition: background-color .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .main{
+        background-color: var(--card-bg);
+        transition: background-color .3s, border-color .3s;
+        border: 1px solid var(--card-border);
+        height: 400px;
+        width: 400px;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        #output1{
+            height: 200px;
+            width: 200px;
+            /* background-color: brown; */
+            font-size: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text);
+            transition: color .3s;
+        }
+        .btns{
+            /* background-color: aqua; */
+            height: 50px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .btn1{
+                background-color: var(--btn-add);
+                color: var(--btn-text);
+                border: none;
+                cursor: pointer;
+                width: 30%;
+                height: 30px;
+                border-radius: 20px;
+            }
+            .btn2{
+                background-color: var(--btn-reset);
+                color: var(--btn-text);
+                border: none;
+                cursor: pointer;
+                width: 30%;
+                height: 30px;
+                border-radius: 20px;
+            }
+            .btn3{
+                background-color: var(--btn-sub);
+                color: var(--btn-text);
+                border: none;
+                cursor: pointer;
+                width: 30%;
+                height: 30px;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+#dlbtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--toggle-bg);
+    color: var(--toggle-text);
+    font-size: 16px;
+}
